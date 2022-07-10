@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1038029053136",
+    "project_id": "arezzo-4c394",
+    "storage_bucket": "arezzo-4c394.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1038029053136:android:a264590ce31543ef76d2d5",
+        "android_client_info": {
+          "package_name": "com.arezzo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1038029053136-uiejmdcv31cav2mqtscnn74cjiaiatfv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_9S2K0AQqALZkrLGI-MYRnPqk83cXJyQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1038029053136-uiejmdcv31cav2mqtscnn74cjiaiatfv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
