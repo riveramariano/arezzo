@@ -24,12 +24,12 @@ class MainActivity : AppCompatActivity() {
         FirebaseApp.initializeApp(this)
         auth = Firebase.auth
 
-        //Llamado al metodo Login
+        // Llamado al metodo Login
         binding.btnLogIn.setOnClickListener{
             doLogin()
         }
 
-        //Llamado al metodo Register
+        // Llamado al metodo Register
         binding.btnRegister.setOnClickListener{
             doRegister()
         }
@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
         val password = binding.txtPassword.text.toString()
 
         if(email=="" && password==""){
-            Toast.makeText(baseContext, "Correo o contraseña vacios", Toast.LENGTH_LONG).show()
+            Toast.makeText(baseContext, "Correo electrónico o contraseña vacíos", Toast.LENGTH_LONG).show()
         }else{
             auth.signInWithEmailAndPassword(email,password)
                 .addOnCompleteListener(this) { task ->
@@ -63,7 +63,7 @@ class MainActivity : AppCompatActivity() {
         val password = binding.txtPassword.text.toString()
 
         if(email=="" && password==""){
-            Toast.makeText(baseContext, "Correo o contraseña vacios", Toast.LENGTH_LONG).show()
+            Toast.makeText(baseContext, "Correo o contraseña vacíos", Toast.LENGTH_LONG).show()
         }else{
             auth.createUserWithEmailAndPassword(email,password)
                 .addOnCompleteListener(this) { task ->
@@ -74,7 +74,7 @@ class MainActivity : AppCompatActivity() {
                         goNextView(user)
                     }else{
                         Log.d("Log In", "Fail")
-                        Toast.makeText(baseContext, "Correo ya registrado", Toast.LENGTH_LONG).show()
+                        Toast.makeText(baseContext, "Correo eletrónico ya registrado", Toast.LENGTH_LONG).show()
                         goNextView(null)
                     }
                 }

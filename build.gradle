@@ -1,6 +1,9 @@
 buildscript {
     dependencies {
         classpath 'com.google.gms:google-services:4.3.13'
+
+        // Para poder pasar parámetros en la navegación entre fragmentos
+        classpath 'androidx.navigation:navigation-safe-args-gradle-plugin:2.4.2'
     }
 }// Top-level build file where you can add configuration options common to all sub-projects/modules.
 plugins {
