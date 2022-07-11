@@ -16,7 +16,7 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_logoff">Cerrar Sesión</string>
 
-    <string name="menu_home">Lista de Libros</string>
+    <string name="menu_libro">Lista de Libros</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
 </resources>

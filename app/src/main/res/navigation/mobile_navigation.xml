@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/nav_libro">
 
     <fragment
-        android:id="@+id/nav_home"
-        android:name="com.arezzo.ui.home.HomeFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/nav_libro"
+        android:name="com.arezzo.ui.libro.LibroFragment"
+        android:label="@string/menu_libro"
+        tools:layout="@layout/fragment_libro" />
 
     <fragment
         android:id="@+id/nav_gallery"
