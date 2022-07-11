@@ -1,13 +1,13 @@
 <resources>
     <string name="app_name">Librería Arezzo</string>
 
-    // Log In and Register
+    <!-- Log In and Register-->
     <string name="msg_Email">Correo Electrónico</string>
     <string name="msg_Password">Contraseña</string>
     <string name="bt_Login">Ingresar</string>
     <string name="bt_Register">Registarse</string>
 
-    // Principal Activity
+    <!-- Principal Activity-->
     <string name="title_activity_principal">PrincipalActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -19,4 +19,12 @@
     <string name="menu_libro">Lista de Libros</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--  Add Libro  -->
+    <string name="add_nombre_libro">Nombre Libro</string>
+    <string name="add_unidades_libro">Cantidad Unidades</string>
+    <string name="add_autor_libro">Nombre Autor</string>
+    <string name="add_agregar_libro">Agregar Libro</string>
 </resources>

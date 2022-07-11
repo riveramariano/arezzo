@@ -9,7 +9,11 @@
         android:id="@+id/nav_libro"
         android:name="com.arezzo.ui.libro.LibroFragment"
         android:label="@string/menu_libro"
-        tools:layout="@layout/fragment_libro" />
+        tools:layout="@layout/fragment_libro" >
+        <action
+            android:id="@+id/action_nav_libro_to_addLibroFragment"
+            app:destination="@id/addLibroFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_gallery"
@@ -22,4 +26,13 @@
         android:name="com.arezzo.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/addLibroFragment"
+        android:name="com.arezzo.ui.libro.AddLibroFragment"
+        android:label="Agregar Libro"
+        tools:layout="@layout/fragment_add_libro" >
+        <action
+            android:id="@+id/action_addLibroFragment_to_nav_libro"
+            app:destination="@id/nav_libro" />
+    </fragment>
 </navigation>
