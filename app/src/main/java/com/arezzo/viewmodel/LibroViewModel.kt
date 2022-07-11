@@ -1,13 +1,30 @@
 package com.arezzo.viewmodel
 
-import androidx.lifecycle.LiveData
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
+import com.arezzo.data.LibroDao
+import com.arezzo.model.Libro
+import com.arezzo.repository.LibroRepository
 
-class LibroViewModel : ViewModel() {
+class LibroViewModel(application: Application) : AndroidViewModel(application) {
+    val getAllData: MutableLiveData<List<Libro>>
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is home Fragment"
+    private val repository: LibroRepository = LibroRepository(LibroDao())
+
+    init {
+        getAllData = repository.getAllData
     }
-    val text: LiveData<String> = _text
+
+    fun addLibro(libro: Libro) {
+        repository.addLibro(libro)
+    }
+
+    fun updateLibro(libro: Libro) {
+        repository.updateLibro(libro)
+    }
+
+    fun deleteLibro(libro: Libro) {
+        repository.deleteLibro(libro)
+    }
 }

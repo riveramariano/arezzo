@@ -7,11 +7,15 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.arezzo.R
 import com.arezzo.databinding.FragmentLibroBinding
 import com.arezzo.viewmodel.LibroViewModel
 
 class LibroFragment : Fragment() {
 
+    private lateinit var libroViewModel: LibroViewModel
     private var _binding: FragmentLibroBinding? = null
 
     // This property is only valid between onCreateView and
@@ -23,17 +27,24 @@ class LibroFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val libroViewModel =
-            ViewModelProvider(this).get(LibroViewModel::class.java)
-
+        libroViewModel = ViewModelProvider(this)[LibroViewModel::class.java]
         _binding = FragmentLibroBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+//        binding.fbAgregar.setOnClickListener {
+//            findNavController().navigate(R.id.action_nav_lugar_to_addLugarFragment)
+//        }
+//
+//        // Activar el RecyclerView
+//        val lugarAdapter = LugarAdapter()
+//        val reciclador = binding.reciclador
+//        reciclador.adapter = lugarAdapter
+//        reciclador.layoutManager = LinearLayoutManager(requireContext())
+//
+//        libroViewModel = ViewModelProvider(this)[LibroViewModel::class.java]
+//        libroViewModel.getAllData.observe(viewLifecycleOwner) { libros ->
+//            lugarAdapter.setData(libros)
+//        }
 
-        val textView: TextView = binding.textHome
-        libroViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
-        return root
+        return binding.root
     }
 
     override fun onDestroyView() {
