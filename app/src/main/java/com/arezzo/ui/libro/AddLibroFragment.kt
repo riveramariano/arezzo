@@ -37,6 +37,18 @@ class AddLibroFragment : Fragment() {
         var unidades = binding.etUnidades.text.toString()
         var autor = binding.etAutor.text.toString()
         if (nombre.isNotEmpty() && unidades.isNotEmpty() && autor.isNotEmpty()) {
+            if (nombre.length > 20) {
+                Toast.makeText(requireContext(), "Nombre Libro muy Largo", Toast.LENGTH_SHORT).show()
+                return
+            }
+            if (unidades.toInt() > 9999) {
+                Toast.makeText(requireContext(), "Màximo 9999 Unidades", Toast.LENGTH_SHORT).show()
+                return
+            }
+            if (autor.length > 25) {
+                Toast.makeText(requireContext(), "Nombre Autor muy Largo", Toast.LENGTH_SHORT).show()
+                return
+            }
             var libro = Libro(
                 "",
                 nombre,
@@ -49,6 +61,7 @@ class AddLibroFragment : Fragment() {
             Toast.makeText(requireContext(), "Libro Agregado", Toast.LENGTH_SHORT).show()
         } else {
             Toast.makeText(requireContext(), "Faltan Datos", Toast.LENGTH_SHORT).show()
+            return
         }
         findNavController().navigate(R.id.action_addLibroFragment_to_nav_libro)
     }

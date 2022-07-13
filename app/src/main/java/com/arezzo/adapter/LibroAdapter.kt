@@ -2,9 +2,11 @@ package com.arezzo.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.arezzo.databinding.LibroFilaBinding
 import com.arezzo.model.Libro
+import com.arezzo.ui.libro.LibroFragmentDirections
 
 class LibroAdapter: RecyclerView.Adapter<LibroAdapter.LibroViewHolder>() {
 
@@ -17,10 +19,10 @@ class LibroAdapter: RecyclerView.Adapter<LibroAdapter.LibroViewHolder>() {
             itemBinding.tvNombreLibro.text = libro.nombre
             itemBinding.tvAutorLibro.text = libro.autor
             itemBinding.tvUnidadesLibro.text = libro.unidades.toString()
-//            itemBinding.vistaFila.setOnClickListener {
-//                val action = LibroFragmentDirections.actionNavLugarToUpdateLugarFragment(lugar)
-//                itemView.findNavController().navigate(action)
-//            }
+            itemBinding.vistaFila.setOnClickListener {
+                val action = LibroFragmentDirections.actionNavLibroToUpdateLibroFragment(libro)
+                itemView.findNavController().navigate(action)
+            }
         }
     }
 
