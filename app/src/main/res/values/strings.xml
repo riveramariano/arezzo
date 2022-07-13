@@ -27,4 +27,5 @@
     <string name="add_unidades_libro">Unidades</string>
     <string name="add_autor_libro">Nombre Autor</string>
     <string name="add_agregar_libro">Agregar Libro</string>
+    <string name="update_actualizar_libro">Actualizar Libro</string>
 </resources>

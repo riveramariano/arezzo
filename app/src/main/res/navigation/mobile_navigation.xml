@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_nav_libro_to_addLibroFragment"
             app:destination="@id/addLibroFragment" />
+        <action
+            android:id="@+id/action_nav_libro_to_updateLibroFragment"
+            app:destination="@id/updateLibroFragment" />
     </fragment>
 
     <fragment
@@ -34,5 +37,17 @@
         <action
             android:id="@+id/action_addLibroFragment_to_nav_libro"
             app:destination="@id/nav_libro" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateLibroFragment"
+        android:name="com.arezzo.ui.libro.UpdateLibroFragment"
+        android:label="Actualizar Libro"
+        tools:layout="@layout/fragment_update_libro" >
+        <action
+            android:id="@+id/action_updateLibroFragment_to_nav_libro"
+            app:destination="@id/nav_libro" />
+        <argument
+            android:name="libro"
+            app:argType="com.arezzo.model.Libro" />
     </fragment>
 </navigation>

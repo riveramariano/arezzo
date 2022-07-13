@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="20dp"
-    tools:context=".ui.libro.AddLibroFragment">
+    tools:context=".ui.libro.UpdateLibroFragment">
 
     <EditText
         android:id="@+id/et_nombre"
@@ -32,8 +32,8 @@
         android:inputType="textPersonName" />
 
     <Button
-        android:id="@+id/btn_agregar_libro"
+        android:id="@+id/btn_actualizar_libro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/add_agregar_libro" />
+        android:text="@string/update_actualizar_libro" />
 </LinearLayout>
