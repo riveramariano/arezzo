@@ -20,7 +20,8 @@
             android:layout_marginTop="16dp"
             android:text="@string/add_nombre_libro"
             android:textAlignment="center"
-            android:textSize="18sp"
+            android:textSize="24sp"
+            android:textStyle="bold|italic"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -32,16 +33,18 @@
             android:layout_marginStart="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_nombre_libro"
+            app:srcCompat="@android:drawable/sym_def_app_icon"
             tools:srcCompat="@tools:sample/avatars" />
 
         <TextView
             android:id="@+id/tv_autor_libro"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="24dp"
             android:text="@string/add_autor_libro"
-            android:textAlignment="center"
+            android:textAlignment="textStart"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imagen_libro"
@@ -52,10 +55,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginEnd="60dp"
             android:text="@string/add_unidades_libro"
+            android:textAlignment="textStart"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/tv_autor_libro" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:text="Cantidad de Unidades:"
+            android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/imagen_libro"
             app:layout_constraintTop_toBottomOf="@+id/tv_autor_libro" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
