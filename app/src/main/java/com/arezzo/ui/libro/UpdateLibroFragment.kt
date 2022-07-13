@@ -1,5 +1,6 @@
 package com.arezzo.ui.libro
 
+import android.app.AlertDialog
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
@@ -8,16 +9,14 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.arezzo.R
-import com.arezzo.databinding.FragmentAddLibroBinding
 import com.arezzo.databinding.FragmentUpdateLibroBinding
 import com.arezzo.model.Libro
 import com.arezzo.viewmodel.LibroViewModel
 
 class UpdateLibroFragment : Fragment() {
-    private lateinit var libroViewModel: LibroViewModel
-
     private var _binding: FragmentUpdateLibroBinding? = null
     private val binding get() = _binding!!
+    private lateinit var libroViewModel: LibroViewModel
 
     private val args by navArgs<UpdateLibroFragmentArgs>()
 
@@ -29,27 +28,27 @@ class UpdateLibroFragment : Fragment() {
 
         libroViewModel = ViewModelProvider(this).get(LibroViewModel::class.java)
 
-        binding.btnActualizarLibro.setOnClickListener { updateLibro() }
-
         binding.etNombre.setText(args.libro.nombre)
         binding.etUnidades.setText(args.libro.unidades.toString())
         binding.etAutor.setText(args.libro.autor)
 
-        // setHasOptionsMenu(true)
+        binding.btnActualizarLibro.setOnClickListener { updateLibro() }
+
+        setHasOptionsMenu(true)
 
         return binding.root
     }
 
-//    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-//        inflater.inflate(R.menu.delete_menu, menu)
-//    }
-//
-//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-//        if (item.itemId == R.id.menu_delete) {
-//            deleteLugar()
-//        }
-//        return super.onOptionsItemSelected(item)
-//    }
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.delete_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == R.id.menu_delete) {
+            deleteLibro()
+        }
+        return super.onOptionsItemSelected(item)
+    }
 
     private fun updateLibro() {
         var nombre = binding.etNombre.text.toString()
@@ -83,5 +82,19 @@ class UpdateLibroFragment : Fragment() {
             return
         }
         findNavController().navigate(R.id.action_updateLibroFragment_to_nav_libro)
+    }
+
+    private fun deleteLibro() {
+        val builder = AlertDialog.Builder(requireContext())
+        builder.setPositiveButton(getString(R.string.si)) { _, _ ->
+            libroViewModel.deleteLibro(args.libro)
+            Toast.makeText(requireContext(), getString(R.string.deleted) + " ${args.libro.nombre}", Toast.LENGTH_LONG).show()
+            findNavController().navigate(R.id.action_updateLibroFragment_to_nav_libro)
+        }
+
+        builder.setNegativeButton(getString(R.string.no)) { _, _ -> }
+        builder.setTitle(R.string.delete)
+        builder.setMessage(getString(R.string.seguro_borrar) + " ${args.libro.nombre}?")
+        builder.create().show()
     }
 }
