@@ -63,7 +63,7 @@ class UpdateLibroFragment : Fragment() {
                 Toast.makeText(requireContext(), "Màximo 9999 Unidades", Toast.LENGTH_SHORT).show()
                 return
             }
-            if (autor.length > 20) {
+            if (autor.length > 25) {
                 Toast.makeText(requireContext(), "Nombre Autor muy Largo", Toast.LENGTH_SHORT).show()
                 return
             }

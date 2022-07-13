@@ -31,6 +31,7 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_nombre_libro"
             app:srcCompat="@android:drawable/sym_def_app_icon"
