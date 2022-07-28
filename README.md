@@ -5,4 +5,5 @@ Arrezo Library - Kotlin/Firebase
 
 - Kendall Céspedes Carrión
 - Mariano Rivera Castillo
+- Kevin Robles Gamboa
 - Emilio Uribe Morales
