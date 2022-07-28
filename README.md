@@ -25,8 +25,8 @@ The project created is a native Android application, which was created in order 
 
 - Clone the repository `https://github.com/riveramariano/arezzo.git`
 - Create a new Firebase project:
-  - Go to `Authentication`:
-    - Enable the email/password auth method
-- Go to `Tools` -> `Connect to Firebase` -> `Add the Firebase Authentication SDK to your app`
+  - Go to Authentication:
+    - Enable the `email/password` auth method
+- Go to `Tools` => `Connect to Firebase` => `Add the Firebase Authentication SDK to your app`
 - Check if the SDK was added to the project
 - Build the project and run the app
