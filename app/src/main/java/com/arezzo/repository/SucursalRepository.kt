@@ -15,7 +15,7 @@ class SucursalRepository(private val sucursalDao: SucursalDao) {
         sucursalDao.updateSucursal(sucursal)
     }
 
-    fun deleteLibro(sucursal: Sucursal) {
+    fun deleteSucursal(sucursal: Sucursal) {
         sucursalDao.deleteSucursal(sucursal)
     }
 }

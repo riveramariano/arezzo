@@ -1,13 +1,30 @@
 package com.arezzo.viewmodel
 
-import androidx.lifecycle.LiveData
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
+import com.arezzo.data.SucursalDao
+import com.arezzo.model.Sucursal
+import com.arezzo.repository.SucursalRepository
 
-class SucursalViewModel : ViewModel() {
+class SucursalViewModel(application: Application) : AndroidViewModel(application) {
+    val getAllData: MutableLiveData<List<Sucursal>>
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is gallery Fragment"
+    private val repository: SucursalRepository = SucursalRepository(SucursalDao())
+
+    init {
+        getAllData = repository.getAllData
     }
-    val text: LiveData<String> = _text
+
+    fun addSucursal(sucursal: Sucursal) {
+        repository.addSucursal(sucursal)
+    }
+
+    fun updateSucursal(sucursal: Sucursal) {
+        repository.updateSucursal(sucursal)
+    }
+
+    fun deleteSucursal(sucursal: Sucursal) {
+        repository.deleteSucursal(sucursal)
+    }
 }
