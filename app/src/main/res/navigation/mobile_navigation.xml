@@ -19,10 +19,10 @@
     </fragment>
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.arezzo.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_sucursal"
+        android:name="com.arezzo.ui.sucursal.SucursalFragment"
+        android:label="@string/menu_sucursal"
+        tools:layout="@layout/fragment_sucursal" />
 
     <fragment
         android:id="@+id/nav_slideshow"

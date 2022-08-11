@@ -1,4 +1,4 @@
-package com.arezzo.ui.gallery
+package com.arezzo.ui.sucursal
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,11 +7,12 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.arezzo.databinding.FragmentGalleryBinding
+import com.arezzo.databinding.FragmentSucursalBinding
+import com.arezzo.viewmodel.SucursalViewModel
 
-class GalleryFragment : Fragment() {
+class SucursalFragment : Fragment() {
 
-    private var _binding: FragmentGalleryBinding? = null
+    private var _binding: FragmentSucursalBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -22,14 +23,14 @@ class GalleryFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val galleryViewModel =
-            ViewModelProvider(this).get(GalleryViewModel::class.java)
+        val sucursalViewModel =
+            ViewModelProvider(this).get(SucursalViewModel::class.java)
 
-        _binding = FragmentGalleryBinding.inflate(inflater, container, false)
+        _binding = FragmentSucursalBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         val textView: TextView = binding.textGallery
-        galleryViewModel.text.observe(viewLifecycleOwner) {
+        sucursalViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
         return root
