@@ -22,7 +22,11 @@
         android:id="@+id/nav_sucursal"
         android:name="com.arezzo.ui.sucursal.SucursalFragment"
         android:label="@string/menu_sucursal"
-        tools:layout="@layout/fragment_sucursal" />
+        tools:layout="@layout/fragment_sucursal" >
+        <action
+            android:id="@+id/action_nav_sucursal_to_addSucursalFragment"
+            app:destination="@id/addSucursalFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/addLibroFragment"
@@ -44,5 +48,14 @@
         <argument
             android:name="libro"
             app:argType="com.arezzo.model.Libro" />
+    </fragment>
+    <fragment
+        android:id="@+id/addSucursalFragment"
+        android:name="com.arezzo.AddSucursalFragment"
+        android:label="fragment_add_sucursal"
+        tools:layout="@layout/fragment_add_sucursal" >
+        <action
+            android:id="@+id/action_addSucursalFragment_to_nav_sucursal"
+            app:destination="@id/nav_sucursal" />
     </fragment>
 </navigation>

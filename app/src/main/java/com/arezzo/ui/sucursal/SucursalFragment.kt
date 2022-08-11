@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.arezzo.databinding.FragmentSucursalBinding
@@ -12,6 +11,7 @@ import com.arezzo.viewmodel.SucursalViewModel
 
 class SucursalFragment : Fragment() {
 
+    private lateinit var sucursalViewModel: SucursalViewModel
     private var _binding: FragmentSucursalBinding? = null
 
     // This property is only valid between onCreateView and
@@ -23,14 +23,24 @@ class SucursalFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val sucursalViewModel =
-            ViewModelProvider(this).get(SucursalViewModel::class.java)
-
+        sucursalViewModel = ViewModelProvider(this)[SucursalViewModel::class.java]
         _binding = FragmentSucursalBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+//        binding.fbAgregarLibro.setOnClickListener {
+//            findNavController().navigate(R.id.action_nav_sucursal_to_addSucursalFragment)
+//        }
 
-        val textView: TextView = binding.textGallery
-        return root
+        // Activar el RecyclerView
+        // val libroAdapter = LibroAdapter()
+        // val reciclador = binding.reciclador
+        // reciclador.adapter = libroAdapter
+        // reciclador.layoutManager = LinearLayoutManager(requireContext())
+
+        sucursalViewModel = ViewModelProvider(this)[SucursalViewModel::class.java]
+        // sucursalViewModel.getAllData.observe(viewLifecycleOwner) { libros ->
+            // libroAdapter.setData(libros)
+        // }
+
+        return binding.root
     }
 
     override fun onDestroyView() {
