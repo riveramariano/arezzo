@@ -35,5 +35,5 @@
         android:id="@+id/btn_agregar_libro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/add_agregar_libro" />
+        android:text="@string/add_agregar_sucursal" />
 </LinearLayout>

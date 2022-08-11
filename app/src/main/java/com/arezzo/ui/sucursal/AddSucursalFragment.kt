@@ -27,29 +27,15 @@ class AddSucursalFragment : Fragment() {
 
         sucursalViewModel = ViewModelProvider(this).get(SucursalViewModel::class.java)
 
-        // binding.btnAgregarLibro.setOnClickListener { addLibro() }
+        binding.btnAgregarSucursal.setOnClickListener { addSucursal() }
 
         return binding.root
     }
 
-    /*
     private fun addSucursal() {
-        var nombre = binding.etNombre.text.toString()
-        var unidades = binding.etUnidades.text.toString()
-        var autor = binding.etAutor.text.toString()
-        if (nombre.isNotEmpty() && unidades.isNotEmpty() && autor.isNotEmpty()) {
-            if (nombre.length > 20) {
-                Toast.makeText(requireContext(), "Nombre Libro muy Largo", Toast.LENGTH_SHORT).show()
-                return
-            }
-            if (unidades.toInt() > 9999) {
-                Toast.makeText(requireContext(), "Màximo 9999 Unidades", Toast.LENGTH_SHORT).show()
-                return
-            }
-            if (autor.length > 25) {
-                Toast.makeText(requireContext(), "Nombre Autor muy Largo", Toast.LENGTH_SHORT).show()
-                return
-            }
+        var gerente = binding.etGerente.text.toString()
+        var telefono = binding.etTelefono.text.toString()
+        if (gerente.isNotEmpty() && telefono.isNotEmpty()) {
             var sucursal = Sucursal(
                 "",
                 gerente,
@@ -64,5 +50,4 @@ class AddSucursalFragment : Fragment() {
         }
         findNavController().navigate(R.id.action_addSucursalFragment_to_nav_sucursal)
     }
-     */
 }

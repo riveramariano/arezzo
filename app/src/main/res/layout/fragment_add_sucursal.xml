@@ -1,14 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddSucursalFragment">
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".ui.sucursal.AddSucursalFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <EditText
+        android:id="@+id/et_gerente"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/add_gerente_sucursal"
+        android:inputType="textPersonName" />
 
-</FrameLayout>
+    <EditText
+        android:id="@+id/et_telefono"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/add_telefono_sucursal"
+        android:inputType="number" />
+    <Button
+        android:id="@+id/btn_agregar_sucursal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_agregar_libro" />
+</LinearLayout>

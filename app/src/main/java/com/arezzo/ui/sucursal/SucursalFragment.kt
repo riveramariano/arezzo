@@ -6,6 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.arezzo.R
+import com.arezzo.adapter.LibroAdapter
 import com.arezzo.databinding.FragmentSucursalBinding
 import com.arezzo.viewmodel.SucursalViewModel
 
@@ -25,9 +29,9 @@ class SucursalFragment : Fragment() {
     ): View {
         sucursalViewModel = ViewModelProvider(this)[SucursalViewModel::class.java]
         _binding = FragmentSucursalBinding.inflate(inflater, container, false)
-        // binding.fbAgregarLibro.setOnClickListener {
-            // findNavController().navigate(R.id.action_nav_sucursal_to_addSucursalFragment)
-        // }
+        binding.fbAgregarSucursal.setOnClickListener {
+            findNavController().navigate(R.id.action_nav_sucursal_to_addSucursalFragment)
+        }
 
         // Activar el RecyclerView
         // val libroAdapter = LibroAdapter()
@@ -35,9 +39,9 @@ class SucursalFragment : Fragment() {
         // reciclador.adapter = libroAdapter
         // reciclador.layoutManager = LinearLayoutManager(requireContext())
 
-        sucursalViewModel = ViewModelProvider(this)[SucursalViewModel::class.java]
-        // sucursalViewModel.getAllData.observe(viewLifecycleOwner) { libros ->
-            // libroAdapter.setData(libros)
+        // sucursalViewModel = ViewModelProvider(this)[SucursalViewModel::class.java]
+        // sucursalViewModel.getAllData.observe(viewLifecycleOwner) { sucursales ->
+           // libroAdapter.setData(sucursales)
         // }
 
         return binding.root

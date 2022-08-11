@@ -19,7 +19,6 @@
     <string name="menu_libro">Libros Arezzo</string>
     <string name="menu_sucursal">Sucursales Arezzo</string>
     <string name="menu_slideshow">Slideshow</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <!--  Add Libro  -->
@@ -29,9 +28,18 @@
     <string name="add_agregar_libro">Agregar Libro</string>
     <string name="update_actualizar_libro">Actualizar Libro</string>
 
+    <!--  Add Sucursal  -->
+    <string name="add_gerente_sucursal">Nombre Gerente</string>
+    <string name="add_telefono_sucursal">Teléfono</string>
+    <string name="add_agregar_sucursal">Agregar Sucursal</string>
+    <string name="update_actualizar_sucursal">Actualizar Sucursal</string>
+
     <string name="si">Si</string>
     <string name="no">No</string>
     <string name="seguro_borrar">Seguro que desea borrar el libro</string>
+    <string name="seguro_borrar_sucursal">Seguro que desea borrar la sucursal</string>
     <string name="delete">Eliminar Libro</string>
     <string name="deleted">Libro Eliminado</string>
+    <string name="delete_sucursal">Eliminar Sucursal</string>
+    <string name="deleted_sucursal">Sucursal Eliminada</string>
 </resources>
