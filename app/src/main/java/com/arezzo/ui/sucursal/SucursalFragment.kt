@@ -25,9 +25,9 @@ class SucursalFragment : Fragment() {
     ): View {
         sucursalViewModel = ViewModelProvider(this)[SucursalViewModel::class.java]
         _binding = FragmentSucursalBinding.inflate(inflater, container, false)
-//        binding.fbAgregarLibro.setOnClickListener {
-//            findNavController().navigate(R.id.action_nav_sucursal_to_addSucursalFragment)
-//        }
+        // binding.fbAgregarLibro.setOnClickListener {
+            // findNavController().navigate(R.id.action_nav_sucursal_to_addSucursalFragment)
+        // }
 
         // Activar el RecyclerView
         // val libroAdapter = LibroAdapter()
