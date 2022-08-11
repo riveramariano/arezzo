@@ -12,9 +12,5 @@
             android:id="@+id/nav_sucursal"
             android:icon="@drawable/ic_sucursal"
             android:title="@string/menu_sucursal" />
-        <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
     </group>
 </menu>
