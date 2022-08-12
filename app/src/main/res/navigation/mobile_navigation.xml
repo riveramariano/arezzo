@@ -51,8 +51,8 @@
     </fragment>
     <fragment
         android:id="@+id/addSucursalFragment"
-        android:name="com.arezzo.AddSucursalFragment"
-        android:label="fragment_add_sucursal"
+        android:name="com.arezzo.ui.sucursal.AddSucursalFragment"
+        android:label="Agregar Sucursal"
         tools:layout="@layout/fragment_add_sucursal" >
         <action
             android:id="@+id/action_addSucursalFragment_to_nav_sucursal"
