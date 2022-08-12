@@ -33,11 +33,13 @@ class AddSucursalFragment : Fragment() {
     }
 
     private fun addSucursal() {
+        var ubicacion = binding.etUbicacion.text.toString()
         var gerente = binding.etGerente.text.toString()
         var telefono = binding.etTelefono.text.toString()
         if (gerente.isNotEmpty() && telefono.isNotEmpty()) {
             var sucursal = Sucursal(
                 "",
+                ubicacion,
                 gerente,
                 telefono,
                 ""

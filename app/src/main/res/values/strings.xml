@@ -29,6 +29,7 @@
     <string name="update_actualizar_libro">Actualizar Libro</string>
 
     <!--  Add Sucursal  -->
+    <string name="add_ubicacion_sucursal">Ubicación Sucursal</string>
     <string name="add_gerente_sucursal">Nombre Gerente</string>
     <string name="add_telefono_sucursal">Teléfono</string>
     <string name="add_agregar_sucursal">Agregar Sucursal</string>
