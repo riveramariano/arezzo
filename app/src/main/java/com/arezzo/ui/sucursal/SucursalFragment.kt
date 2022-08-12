@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.arezzo.R
 import com.arezzo.adapter.LibroAdapter
+import com.arezzo.adapter.SucursalAdapter
 import com.arezzo.databinding.FragmentSucursalBinding
 import com.arezzo.viewmodel.SucursalViewModel
 
@@ -34,15 +35,15 @@ class SucursalFragment : Fragment() {
         }
 
         // Activar el RecyclerView
-        // val libroAdapter = LibroAdapter()
-        // val reciclador = binding.reciclador
-        // reciclador.adapter = libroAdapter
-        // reciclador.layoutManager = LinearLayoutManager(requireContext())
+        val sucursalAdapter = SucursalAdapter()
+        val reciclador = binding.reciclador
+        reciclador.adapter = sucursalAdapter
+        reciclador.layoutManager = LinearLayoutManager(requireContext())
 
-        // sucursalViewModel = ViewModelProvider(this)[SucursalViewModel::class.java]
-        // sucursalViewModel.getAllData.observe(viewLifecycleOwner) { sucursales ->
-           // libroAdapter.setData(sucursales)
-        // }
+        sucursalViewModel = ViewModelProvider(this)[SucursalViewModel::class.java]
+        sucursalViewModel.getAllData.observe(viewLifecycleOwner) { sucursales ->
+           sucursalAdapter.setData(sucursales)
+        }
 
         return binding.root
     }

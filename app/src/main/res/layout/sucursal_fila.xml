@@ -41,7 +41,7 @@
             android:id="@+id/tv_telefono_sucursal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="22dp"
             android:layout_marginEnd="24dp"
             android:text="@string/add_telefono_sucursal"
             android:textAlignment="textStart"
@@ -54,7 +54,7 @@
             android:id="@+id/tv_gerente_sucursal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="14dp"
             android:layout_marginEnd="24dp"
             android:text="@string/add_gerente_sucursal"
             android:textAlignment="textStart"
@@ -79,10 +79,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
             android:text="Teléfono:"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/imagen_sucursal"
-            tools:layout_editor_absoluteY="77dp" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_ubicacion_sucursal" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
