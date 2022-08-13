@@ -43,4 +43,7 @@
     <string name="deleted">Libro Eliminado</string>
     <string name="delete_sucursal">Eliminar Sucursal</string>
     <string name="deleted_sucursal">Sucursal Eliminada</string>
+    <string name="delete_nota">Eliminar nota de audio</string>
+    <string name="play_nota">Play</string>
+    <string name="rec_stop_nota">Stop</string>
 </resources>

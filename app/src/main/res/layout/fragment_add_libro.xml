@@ -31,9 +31,42 @@
         android:hint="@string/add_autor_libro"
         android:inputType="textPersonName" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/bt_accion"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/rec_stop_nota"
+            android:src="@drawable/ic_mic"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <ImageButton
+            android:id="@+id/bt_play"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/play_nota"
+            android:src="@drawable/ic_play" />
+
+        <ImageButton
+            android:id="@+id/bt_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/delete_nota"
+            android:src="@drawable/ic_delete" />
+    </LinearLayout>
+
     <Button
         android:id="@+id/btn_agregar_libro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:text="@string/add_agregar_libro" />
 </LinearLayout>
