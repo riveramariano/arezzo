@@ -63,7 +63,7 @@
     </fragment>
     <fragment
         android:id="@+id/updateSucursalFragment"
-        android:name="com.arezzo.ui.libro.UpdateSucursalFragment"
+        android:name="com.arezzo.ui.sucursal.UpdateSucursalFragment"
         android:label="Actualizar Sucursal" >
         <action
             android:id="@+id/action_updateSucursalFragment_to_nav_sucursal"

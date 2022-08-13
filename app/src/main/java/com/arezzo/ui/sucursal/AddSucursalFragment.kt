@@ -36,7 +36,19 @@ class AddSucursalFragment : Fragment() {
         var ubicacion = binding.etUbicacion.text.toString()
         var gerente = binding.etGerente.text.toString()
         var telefono = binding.etTelefono.text.toString()
-        if (gerente.isNotEmpty() && telefono.isNotEmpty()) {
+        if (ubicacion.isNotEmpty() && gerente.isNotEmpty() && telefono.isNotEmpty()) {
+            if (ubicacion.length > 20) {
+                Toast.makeText(requireContext(), "Ubicación muy Larga", Toast.LENGTH_SHORT).show()
+                return
+            }
+            if (telefono.length < 8 || telefono.length > 8) {
+                Toast.makeText(requireContext(), "Teléfono no Válido", Toast.LENGTH_SHORT).show()
+                return
+            }
+            if (gerente.length > 25) {
+                Toast.makeText(requireContext(), "Nombre Gerente muy Largo", Toast.LENGTH_SHORT).show()
+                return
+            }
             var sucursal = Sucursal(
                 "",
                 ubicacion,

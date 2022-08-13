@@ -29,8 +29,8 @@ class UpdateSucursalFragment : Fragment() {
         sucursalViewModel = ViewModelProvider(this).get(SucursalViewModel::class.java)
 
         binding.etUbicacion.setText(args.sucursal.ubicacion)
-        binding.etGerente.setText(args.sucursal.telefono)
-        binding.etTelefono.setText(args.sucursal.gerente)
+        binding.etGerente.setText(args.sucursal.gerente)
+        binding.etTelefono.setText(args.sucursal.telefono)
 
         binding.btnActualizarSucursal.setOnClickListener { updateSucursal() }
 
@@ -54,16 +54,28 @@ class UpdateSucursalFragment : Fragment() {
         var ubicacion = binding.etUbicacion.text.toString()
         var gerente = binding.etGerente.text.toString()
         var telefono = binding.etTelefono.text.toString()
-        if (gerente.isNotEmpty() && telefono.isNotEmpty()) {
+        if (ubicacion.isNotEmpty() && gerente.isNotEmpty() && telefono.isNotEmpty()) {
+            if (ubicacion.length > 20) {
+                Toast.makeText(requireContext(), "Ubicación muy Larga", Toast.LENGTH_SHORT).show()
+                return
+            }
+            if (telefono.length < 8 || telefono.length > 8) {
+                Toast.makeText(requireContext(), "Teléfono no Válido", Toast.LENGTH_SHORT).show()
+                return
+            }
+            if (gerente.length > 25) {
+                Toast.makeText(requireContext(), "Nombre Gerente muy Largo", Toast.LENGTH_SHORT).show()
+                return
+            }
             var sucursal = Sucursal(
-                "",
+                args.sucursal.id,
                 ubicacion,
                 gerente,
                 telefono,
                 ""
             )
             sucursalViewModel.updateSucursal(sucursal)
-            Toast.makeText(requireContext(), "Sucursal Agregada", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), "Sucursal Actualiza", Toast.LENGTH_SHORT).show()
         } else {
             Toast.makeText(requireContext(), "Faltan Datos", Toast.LENGTH_SHORT).show()
             return
@@ -76,12 +88,12 @@ class UpdateSucursalFragment : Fragment() {
         builder.setPositiveButton(getString(R.string.si)) { _, _ ->
             sucursalViewModel.deleteSucursal(args.sucursal)
             Toast.makeText(requireContext(), getString(R.string.deleted_sucursal) + " de ${args.sucursal.ubicacion}", Toast.LENGTH_LONG).show()
-            findNavController().navigate(R.id.action_updateLibroFragment_to_nav_libro)
+            findNavController().navigate(R.id.action_updateSucursalFragment_to_nav_sucursal)
         }
 
         builder.setNegativeButton(getString(R.string.no)) { _, _ -> }
         builder.setTitle(R.string.delete_sucursal)
-        builder.setMessage(getString(R.string.seguro_borrar_sucursal) + " de ${args.sucursal.ubicacion}?")
+        builder.setMessage(getString(R.string.seguro_borrar_sucursal) + "?")
         builder.create().show()
     }
 }

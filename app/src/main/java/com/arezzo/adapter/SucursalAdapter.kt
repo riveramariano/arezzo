@@ -20,10 +20,10 @@ class SucursalAdapter: RecyclerView.Adapter<SucursalAdapter.SucursalViewHolder>(
             itemBinding.tvUbicacionSucursal.text = sucursal.ubicacion
             itemBinding.tvTelefonoSucursal.text = sucursal.telefono
             itemBinding.tvGerenteSucursal.text = sucursal.gerente
-            // itemBinding.vistaFilaSucursal.setOnClickListener {
-                // val action = SucursalFragmentDirections.actionNavLibroToUpdateLibroFragment(sucursal)
-                // itemView.findNavController().navigate(action)
-            // }
+            itemBinding.vistaFilaSucursal.setOnClickListener {
+                val action = SucursalFragmentDirections.actionNavSucursalToUpdateSucursalFragment(sucursal)
+                itemView.findNavController().navigate(action)
+            }
         }
     }
 

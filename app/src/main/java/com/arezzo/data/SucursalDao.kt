@@ -56,6 +56,7 @@ class SucursalDao {
     // Agregar un nueva sucursal
     fun addSucursal(sucursal: Sucursal) {
         var document: DocumentReference
+        Log.d("a", sucursal.id)
         if (sucursal.id.isEmpty()) {
             // Es un sucursal nueva / documento nuevo
             document = firestore
