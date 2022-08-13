@@ -3,19 +3,24 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/mar19/AndroidStudioProjects/arezzo/app/src/main/res/drawable/ic_menu_gallery.xml" value="0.206" />
         <entry key="..\:/Users/mar19/AndroidStudioProjects/arezzo/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/Users/mar19/AndroidStudioProjects/arezzo/app/src/main/res/layout/activity_principal.xml" value="0.13551165146909827" />
+        <entry key="..\:/Users/mar19/AndroidStudioProjects/arezzo/app/src/main/res/layout/activity_principal.xml" value="0.335" />
         <entry key="..\:/Users/mar19/AndroidStudioProjects/arezzo/app/src/main/res/layout/app_bar_principal.xml" value="0.13551165146909827" />
         <entry key="..\:/Users/mar19/AndroidStudioProjects/arezzo/app/src/main/res/layout/content_principal.xml" value="0.13551165146909827" />
         <entry key="..\:/Users/mar19/AndroidStudioProjects/arezzo/app/src/main/res/layout/fragment_add_libro.xml" value="0.25" />
+        <entry key="..\:/Users/mar19/AndroidStudioProjects/arezzo/app/src/main/res/layout/fragment_add_sucursal.xml" value="0.16485507246376813" />
         <entry key="..\:/Users/mar19/AndroidStudioProjects/arezzo/app/src/main/res/layout/fragment_gallery.xml" value="0.13551165146909827" />
         <entry key="..\:/Users/mar19/AndroidStudioProjects/arezzo/app/src/main/res/layout/fragment_home.xml" value="0.13551165146909827" />
         <entry key="..\:/Users/mar19/AndroidStudioProjects/arezzo/app/src/main/res/layout/fragment_libro.xml" value="0.25" />
         <entry key="..\:/Users/mar19/AndroidStudioProjects/arezzo/app/src/main/res/layout/fragment_slideshow.xml" value="0.13551165146909827" />
+        <entry key="..\:/Users/mar19/AndroidStudioProjects/arezzo/app/src/main/res/layout/fragment_sucursal.xml" value="0.259963768115942" />
         <entry key="..\:/Users/mar19/AndroidStudioProjects/arezzo/app/src/main/res/layout/fragment_update_libro.xml" value="0.25" />
+        <entry key="..\:/Users/mar19/AndroidStudioProjects/arezzo/app/src/main/res/layout/fragment_update_sucursal.xml" value="0.13551165146909827" />
         <entry key="..\:/Users/mar19/AndroidStudioProjects/arezzo/app/src/main/res/layout/libro_fila.xml" value="0.375" />
         <entry key="..\:/Users/mar19/AndroidStudioProjects/arezzo/app/src/main/res/layout/nav_header_principal.xml" value="0.11203703703703703" />
-        <entry key="..\:/Users/mar19/AndroidStudioProjects/arezzo/app/src/main/res/menu/activity_main_drawer.xml" value="0.21360544217687075" />
+        <entry key="..\:/Users/mar19/AndroidStudioProjects/arezzo/app/src/main/res/layout/sucursal_fila.xml" value="0.335" />
+        <entry key="..\:/Users/mar19/AndroidStudioProjects/arezzo/app/src/main/res/menu/activity_main_drawer.xml" value="0.335" />
         <entry key="..\:/Users/mar19/AndroidStudioProjects/arezzo/app/src/main/res/menu/delete_menu.xml" value="0.165" />
         <entry key="..\:/Users/mar19/AndroidStudioProjects/arezzo/app/src/main/res/menu/principal.xml" value="0.20462962962962963" />
       </map>

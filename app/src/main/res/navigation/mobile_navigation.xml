@@ -19,16 +19,18 @@
     </fragment>
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.arezzo.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_sucursal"
+        android:name="com.arezzo.ui.sucursal.SucursalFragment"
+        android:label="@string/menu_sucursal"
+        tools:layout="@layout/fragment_sucursal" >
+        <action
+            android:id="@+id/action_nav_sucursal_to_addSucursalFragment"
+            app:destination="@id/addSucursalFragment" />
+        <action
+            android:id="@+id/action_nav_sucursal_to_updateSucursalFragment"
+            app:destination="@id/updateSucursalFragment" />
+    </fragment>
 
-    <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.arezzo.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
     <fragment
         android:id="@+id/addLibroFragment"
         android:name="com.arezzo.ui.libro.AddLibroFragment"
@@ -49,5 +51,25 @@
         <argument
             android:name="libro"
             app:argType="com.arezzo.model.Libro" />
+    </fragment>
+    <fragment
+        android:id="@+id/addSucursalFragment"
+        android:name="com.arezzo.ui.sucursal.AddSucursalFragment"
+        android:label="Agregar Sucursal"
+        tools:layout="@layout/fragment_add_sucursal" >
+        <action
+            android:id="@+id/action_addSucursalFragment_to_nav_sucursal"
+            app:destination="@id/nav_sucursal" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateSucursalFragment"
+        android:name="com.arezzo.ui.sucursal.UpdateSucursalFragment"
+        android:label="Actualizar Sucursal" >
+        <action
+            android:id="@+id/action_updateSucursalFragment_to_nav_sucursal"
+            app:destination="@id/nav_sucursal" />
+        <argument
+            android:name="sucursal"
+            app:argType="com.arezzo.model.Sucursal" />
     </fragment>
 </navigation>
