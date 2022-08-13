@@ -26,6 +26,9 @@
         <action
             android:id="@+id/action_nav_sucursal_to_addSucursalFragment"
             app:destination="@id/addSucursalFragment" />
+        <action
+            android:id="@+id/action_nav_sucursal_to_updateSucursalFragment"
+            app:destination="@id/updateSucursalFragment" />
     </fragment>
 
     <fragment
@@ -57,5 +60,16 @@
         <action
             android:id="@+id/action_addSucursalFragment_to_nav_sucursal"
             app:destination="@id/nav_sucursal" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateSucursalFragment"
+        android:name="com.arezzo.ui.libro.UpdateSucursalFragment"
+        android:label="Actualizar Sucursal" >
+        <action
+            android:id="@+id/action_updateSucursalFragment_to_nav_sucursal"
+            app:destination="@id/nav_sucursal" />
+        <argument
+            android:name="sucursal"
+            app:argType="com.arezzo.model.Sucursal" />
     </fragment>
 </navigation>
