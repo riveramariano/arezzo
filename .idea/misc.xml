@@ -23,6 +23,19 @@
         <entry key="..\:/Users/mar19/AndroidStudioProjects/arezzo/app/src/main/res/menu/activity_main_drawer.xml" value="0.335" />
         <entry key="..\:/Users/mar19/AndroidStudioProjects/arezzo/app/src/main/res/menu/delete_menu.xml" value="0.165" />
         <entry key="..\:/Users/mar19/AndroidStudioProjects/arezzo/app/src/main/res/menu/principal.xml" value="0.20462962962962963" />
+        <entry key="..\:/Users/pc915313/OneDrive/Documents/GitHub/arezzo/app/src/main/res/layout/activity_main.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/pc915313/OneDrive/Documents/GitHub/arezzo/app/src/main/res/layout/activity_principal.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/pc915313/OneDrive/Documents/GitHub/arezzo/app/src/main/res/layout/app_bar_principal.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/pc915313/OneDrive/Documents/GitHub/arezzo/app/src/main/res/layout/content_principal.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/pc915313/OneDrive/Documents/GitHub/arezzo/app/src/main/res/layout/fragment_add_libro.xml" value="0.33" />
+        <entry key="..\:/Users/pc915313/OneDrive/Documents/GitHub/arezzo/app/src/main/res/layout/fragment_add_sucursal.xml" value="0.25" />
+        <entry key="..\:/Users/pc915313/OneDrive/Documents/GitHub/arezzo/app/src/main/res/layout/fragment_libro.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/pc915313/OneDrive/Documents/GitHub/arezzo/app/src/main/res/layout/fragment_sucursal.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/pc915313/OneDrive/Documents/GitHub/arezzo/app/src/main/res/layout/fragment_update_libro.xml" value="0.25" />
+        <entry key="..\:/Users/pc915313/OneDrive/Documents/GitHub/arezzo/app/src/main/res/layout/fragment_update_sucursal.xml" value="0.33" />
+        <entry key="..\:/Users/pc915313/OneDrive/Documents/GitHub/arezzo/app/src/main/res/layout/libro_fila.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/pc915313/OneDrive/Documents/GitHub/arezzo/app/src/main/res/layout/nav_header_principal.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/pc915313/OneDrive/Documents/GitHub/arezzo/app/src/main/res/layout/sucursal_fila.xml" value="0.18333333333333332" />
       </map>
     </option>
   </component>

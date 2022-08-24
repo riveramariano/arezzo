@@ -1,6 +1,7 @@
 package com.arezzo.ui.sucursal
 
 import android.app.AlertDialog
+import android.net.Uri
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
@@ -33,6 +34,8 @@ class UpdateSucursalFragment : Fragment() {
         binding.etTelefono.setText(args.sucursal.telefono)
 
         binding.btnActualizarSucursal.setOnClickListener { updateSucursal() }
+
+
 
         setHasOptionsMenu(true)
 

@@ -43,4 +43,6 @@
     <string name="deleted">Libro Eliminado</string>
     <string name="delete_sucursal">Eliminar Sucursal</string>
     <string name="deleted_sucursal">Sucursal Eliminada</string>
+    <string name="success_save">Se guardo la imagen en Firebase con exito!!</string>
+    <string name="fail_save">No se pudo guardar la imagen con exito</string>
 </resources>
